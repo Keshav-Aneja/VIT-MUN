@@ -6,7 +6,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
-const Register = () => {
+const RegisterInternal = () => {
   //   const [form, setForm] = useState({});
   return (
     <div className="w-full h-full min-h-fit">
@@ -67,4 +67,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterInternal;

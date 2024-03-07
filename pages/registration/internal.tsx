@@ -3,8 +3,8 @@ import NavWrapper from "@/wrappers/NavWrapper";
 import BaseWrapper from "@/wrappers/BaseWrapper";
 import MainWrapper from "@/wrappers/MainWrapper";
 import Header from "@/components/common/Header";
-import Register from "@/screens/RegisterInternal";
-const Registration = () => {
+import RegisterInternal from "@/screens/RegisterInternal";
+const internal = () => {
   return (
     <>
       <BaseWrapper>
@@ -12,11 +12,11 @@ const Registration = () => {
           <Header />
         </NavWrapper>
         <MainWrapper>
-          <Register />
+          <RegisterInternal />
         </MainWrapper>
       </BaseWrapper>
     </>
   );
 };
 
-export default Registration;
+export default internal;
