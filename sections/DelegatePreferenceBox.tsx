@@ -13,8 +13,45 @@ const DelegatePreferenceBox = ({ setForm, id }: Props) => {
         <option value="" selected disabled>
           Committee Preference {id}
         </option>
-        <option value="B">B</option>
-        <option value="C">C</option>
+        <option
+          value="CHAOS: Council to Halt Annihilation of States
+"
+        >
+          CHAOS: Council to Halt Annihilation of States
+        </option>
+        <option
+          value="JIC-SM: Joint Intelligence Command Special Meeting
+"
+        >
+          JIC-SM: Joint Intelligence Command Special Meeting
+        </option>
+        <option
+          value="UNSC (United Nations Security Council)
+"
+        >
+          UNSC (United Nations Security Council)
+        </option>
+        <option
+          value="SOCHUM (Social, Humanitarian and Cultural Committee)
+"
+        >
+          SOCHUM (Social, Humanitarian and Cultural Committee)
+        </option>
+        <option
+          value="ECOSOC (Economic and Social Council)
+"
+        >
+          ECOSOC (Economic and Social Council)
+        </option>
+        <option
+          value="Lok Sabha
+"
+        >
+          Lok Sabha
+        </option>
+        <option value="Disarmament and International Security Committee (DISEC)">
+          Disarmament and International Security Committee (DISEC)
+        </option>
       </select>
       <div className="flex justify-between">
         <input
