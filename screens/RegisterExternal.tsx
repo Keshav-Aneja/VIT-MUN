@@ -23,7 +23,22 @@ const RegisterExternal = () => {
                 placeholder="Name"
                 label="Participant Name"
               />
-              <InputBox name="gender" placeholder="Gender" label="Gender" />
+              <div className="flex flex-col gap-2 w-[47%] mb-8">
+                <label htmlFor={"gender"} className="text-lg font-cereal">
+                  Gender
+                </label>
+                <select
+                  name="gender"
+                  className="w-[80%] outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
+                >
+                  <option value="" selected disabled>
+                    Gender
+                  </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
               <InputBox
                 name="contact_number"
                 placeholder="Whatsapp Number"
@@ -35,11 +50,21 @@ const RegisterExternal = () => {
                 placeholder="Organization"
                 label="Organization Name"
               />
-              <InputBox
-                name="accomodation"
-                placeholder="Accomodation"
-                label="Yes/No"
-              />
+              <div className="flex flex-col gap-2 w-[47%] mb-8">
+                <label htmlFor={"accomodation"} className="text-lg font-cereal">
+                  Accomodation
+                </label>
+                <select
+                  name="accomodation"
+                  className="w-[80%] outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
+                >
+                  <option value="" selected disabled>
+                    Yes / No
+                  </option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
             </div>
             <div className="--delegate-preference mb-12">
               <div className="flex gap-4">
