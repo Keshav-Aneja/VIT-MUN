@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: cereal;
+  src: url("/Cereal.otf");
+}
+@font-face {
+  font-family: cereal-bold;
+  src: url("/CerealBold.otf");
+}
+@font-face {
+  font-family: cereal-medium;
+  src: url("/CerealMedium.otf");
+}
