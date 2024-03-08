@@ -14,3 +14,17 @@
   font-family: cereal-medium;
   src: url("/CerealMedium.otf");
 }
+.rotation {
+  animation: rotateImg 15s infinite linear reverse;
+}
+.rotation2 {
+  animation: rotateImg 15s infinite linear;
+}
+@keyframes rotateImg {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
