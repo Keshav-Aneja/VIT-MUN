@@ -17,5 +17,5 @@ jobs:
 
     - name: Build and Deploy
       run: |
-        sudo docker compose up --build -d
+        docker compose up --build -d
       working-directory: /home/adminuser/munsoc/munsoc-frontend
