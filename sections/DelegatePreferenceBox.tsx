@@ -1,14 +1,16 @@
 import React from "react";
 interface Props {
-  setForm?: any;
   id: number;
+  onChange: (e:  React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
 }
-const DelegatePreferenceBox = ({ setForm, id }: Props) => {
+const DelegatePreferenceBox = ({ onChange, id }: Props) => {
   return (
     <div className="w-full rounded-xl border-2 border-black p-12 font-cereal my-6">
       <select
         name="Commitee_Preference_1"
         className="w-full px-6 py-2 outline-none border-2 border-[#00000050] rounded-lg mb-6 text-xl"
+        onChange={onChange}
+        id={`CommitteePreference${id}`}
       >
         <option value="" selected disabled>
           Committee Preference {id}
@@ -58,18 +60,24 @@ const DelegatePreferenceBox = ({ setForm, id }: Props) => {
           type="text"
           name="Allotment Preference 1"
           placeholder="Allotment Preference 1"
+          onChange={onChange}
+          id={`Committee${id}AllotmentPreference1`}
           className="rounded-lg text-xl border-2 border-[#00000050] w-[30%] px-4 py-2 outline-none"
         />
         <input
           type="text"
           name="Allotment Preference 2"
           placeholder="Allotment Preference 2"
+          onChange={onChange}
+          id={`Committee${id}AllotmentPreference2`}
           className="rounded-lg text-xl border-2 border-[#00000050] w-[30%] px-4 py-2 outline-none"
         />
         <input
           type="text"
           name="Allotment Preference 3"
           placeholder="Allotment Preference 3"
+          onChange={onChange}
+          id={`Committee${id}AllotmentPreference3`}
           className="rounded-lg text-xl border-2 border-[#00000050] w-[30%] px-4 py-2 outline-none"
         />
       </div>

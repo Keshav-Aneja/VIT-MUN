@@ -3,9 +3,10 @@ interface Props {
   label: string;
   placeholder: string;
   name: string;
-  onChange?: any;
+  id: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
 }
-const InputBox = ({ label, placeholder, name, onChange }: Props) => {
+const InputBox = ({ label, placeholder, name, onChange, id }: Props) => {
   return (
     <div className="flex flex-col gap-2 w-[42%] mb-8">
       <label htmlFor={name} className="text-lg font-cereal">
@@ -15,6 +16,8 @@ const InputBox = ({ label, placeholder, name, onChange }: Props) => {
         type="text"
         name={name}
         placeholder={placeholder}
+        id={id}
+        onChange={onChange}
         className="w-full border-2 border-[#00000050] rounded-lg outline-none px-4 py-2"
       />
     </div>

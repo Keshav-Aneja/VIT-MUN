@@ -1,4 +1,6 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Labels from "@/components/common/Labels";
@@ -6,64 +8,121 @@ import SectionHeading from "@/components/common/SectionHeading";
 import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
+import { InternalFormState } from "@/types/form";
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import axios from 'axios'
+
 const RegisterInternal = () => {
-  //   const [form, setForm] = useState({});
+  const [form, setForm] = useState<InternalFormState>({
+    ParticipantName: "",
+    ParticipantRegNumber: "",
+    ParticipantPhone: "",
+    ParticipantEmail: "",
+    CommitteePreference1: "",
+    Committee1AllotmentPreference1: "",
+    Committee1AllotmentPreference2: "",
+    Committee1AllotmentPreference3: "",
+    CommitteePreference2: "",
+    Committee2AllotmentPreference1: "",
+    Committee2AllotmentPreference2: "",
+    Committee2AllotmentPreference3: "",
+    CommitteePreference3: "",
+    Committee3AllotmentPreference1: "",
+    Committee3AllotmentPreference2: "",
+    Committee3AllotmentPreference3: "",
+    MUNDelegateCount: "",
+    MUNDelegateExperience: "",
+    MUNExecutiveCount: "",
+    MUNExecutiveExperience: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    for (let key in form) {
+      if ((form[key]) === "") {
+        toast.error(`Please fill out all the fields.`);
+        return;
+      }
+    }
+    try {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/internal`, form)
+      toast.success(response.data.message)
+    } catch (err: any) {
+      toast.error(err.response.data.message)
+    }
+  }
+
   return (
-    <div className="w-full h-full min-h-fit">
-      <div className="--container w-[90%] h-full mx-auto">
-        <Heading
-          heading={"Internal Individual Registration"}
-          subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN24."
-        />
-        <div className="--form w-[90%] mx-auto p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)] my-20">
-          <form action="">
-            <div className="--participants-info w-full flex  justify-between flex-wrap mb-12">
-              <InputBox
-                name="participant_name"
-                placeholder="Name"
-                label="Participant Name"
-              />
-              <InputBox
-                name="registration_number"
-                placeholder="2XBXX1234"
-                label="Registration Number"
-              />
-              <InputBox
-                name="contact_number"
-                placeholder="Whatsapp Number"
-                label="Contact Number"
-              />
-              <InputBox name="email" placeholder="Email" label="Email - ID" />
-            </div>
-            <div className="--delegate-preference mb-12">
-              <div className="flex gap-4">
-                <SectionHeading heading="Delegate Preference" />
-                <Labels label="COUNTRY MATRIX" />
+    <>
+      <ToastContainer />
+      <main className="w-full h-full min-h-fit">
+        <div className="--container w-[90%] h-full mx-auto">
+          <Heading
+            heading={"Internal Individual Registration"}
+            subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN24."
+          />
+          <div className="--form w-[90%] mx-auto p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)] my-20">
+            <form action="" onSubmit={handleSubmit} >
+              <div className="--participants-info w-full flex  justify-between flex-wrap mb-12">
+                <InputBox
+                  name="participant_name"
+                  placeholder="Name"
+                  label="Participant Name"
+                  id="ParticipantName"
+                  onChange={handleChange}
+                />
+                <InputBox
+                  name="registration_number"
+                  placeholder="2XBXX1234"
+                  label="Registration Number"
+                  id="ParticipantRegNumber"
+                  onChange={handleChange}
+                />
+                <InputBox
+                  name="contact_number"
+                  placeholder="Whatsapp Number"
+                  label="Contact Number"
+                  id="ParticipantPhone"
+                  onChange={handleChange}
+                />
+                <InputBox name="email" placeholder="Email" label="Email - ID" onChange={handleChange} id="ParticipantEmail" />
               </div>
-              <DelegatePreferenceBox id={1} />
-              <DelegatePreferenceBox id={2} />
-              <DelegatePreferenceBox id={3} />
-            </div>
-            <div className="--delegate-experience">
-              <div className="mb-6">
-                <SectionHeading heading="Delegate Experience" />
+              <div className="--delegate-preference mb-12">
+                <div className="flex gap-4">
+                  <SectionHeading heading="Delegate Preference" />
+                  <Labels label="COUNTRY MATRIX" />
+                </div>
+                <DelegatePreferenceBox id={1} onChange={handleChange} />
+                <DelegatePreferenceBox id={2} onChange={handleChange} />
+                <DelegatePreferenceBox id={3} onChange={handleChange} />
               </div>
-              <DelegateExperienceBox id={1} />
-              <DelegateExperienceBox id={2} />
-            </div>
-            <div className="w-full flex justify-center">
-              <button
-                type="submit"
-                className="bg-[#1f75bc] rounded-lg px-4 py-2 text-white font-cerealMed text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]"
-              >
-                PRESENT AND VOTING
-              </button>
-            </div>
-          </form>
+              <div className="--delegate-experience">
+                <div className="mb-6">
+                  <SectionHeading heading="Delegate Experience" />
+                </div>
+                <DelegateExperienceBox id={1} onChange={handleChange} boxType="Delegate" />
+                <DelegateExperienceBox id={2} onChange={handleChange} boxType="Executive" />
+              </div>
+              <div className="w-full flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-[#1f75bc] rounded-lg px-4 py-2 text-white font-cerealMed text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]"
+                >
+                  PRESENT AND VOTING
+                </button>
+              </div>
+            </form>
+          </div>
+          <Help />
         </div>
-        <Help />
-      </div>
-    </div>
+      </main>
+    </>
   );
 };
 
