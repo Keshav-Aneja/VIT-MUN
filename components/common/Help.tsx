@@ -20,7 +20,7 @@ const Help = () => {
             <div className="mb-8 leading-relaxed text-blue-600">
               Avyukt H Agrawal : +91-8903689328
               <br />
-              Raghav Mittal : +91-9717900417
+              Aniket R Perai: +91-9650686499
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

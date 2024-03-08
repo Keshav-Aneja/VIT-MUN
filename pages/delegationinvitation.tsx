@@ -1,12 +1,18 @@
-import Help from '@/components/common/Help'
-import React from 'react'
+import Help from "@/components/common/Help";
+import React from "react";
 
 const delegationinvitation = () => {
   return (
     <>
-    <Help />
-    </>
-  )
-}
+      <div>Request an Invite</div>
+      <div>
+        Fill out the form below if your delegation hasn&apos;t received an
+        invite yet.
+      </div>
 
-export default delegationinvitation
+      <Help />
+    </>
+  );
+};
+
+export default delegationinvitation;
