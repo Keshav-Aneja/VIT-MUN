@@ -1,0 +1,6 @@
+version: "3.6"
+services:
+  munsoc-frontend:
+    build: .
+    ports:
+      - "3010:3010"
