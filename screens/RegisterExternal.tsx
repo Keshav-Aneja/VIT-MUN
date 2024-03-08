@@ -23,13 +23,13 @@ const RegisterExternal = () => {
                 placeholder="Name"
                 label="Participant Name"
               />
-              <div className="flex flex-col gap-2 w-[47%] mb-8">
+              <div className="flex flex-col gap-2 w-[42%] mb-8">
                 <label htmlFor={"gender"} className="text-lg font-cereal">
                   Gender
                 </label>
                 <select
                   name="gender"
-                  className="w-[80%] outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
+                  className="w-full outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
                 >
                   <option value="" selected disabled>
                     Gender
@@ -50,13 +50,13 @@ const RegisterExternal = () => {
                 placeholder="Organization"
                 label="Organization Name"
               />
-              <div className="flex flex-col gap-2 w-[47%] mb-8">
+              <div className="flex flex-col gap-2 w-[42%] mb-8">
                 <label htmlFor={"accomodation"} className="text-lg font-cereal">
                   Accomodation
                 </label>
                 <select
                   name="accomodation"
-                  className="w-[80%] outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
+                  className="w-full outline-none border-2 border-[#00000050] rounded-lg px-4 py-2"
                 >
                   <option value="" selected disabled>
                     Yes / No

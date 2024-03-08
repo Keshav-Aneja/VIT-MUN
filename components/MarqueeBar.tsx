@@ -6,7 +6,7 @@ const MarqueeBar = () => {
     <div className="w-full h-[7%]  border-b-2 border-black flex items-center">
       <Marquee>
         <div className="w-full flex gap-12 font-cerealBold">
-          <p>WHERE YOUR VOICE MATTERS</p>
+          <p className="ml-12">WHERE YOUR VOICE MATTERS</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
           <p>ONE OF THE BIGGEST MUN IN SOUTH INDIA</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
