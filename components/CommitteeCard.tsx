@@ -18,7 +18,9 @@ const CommitteeCard = ({ heading, img, description, link }: Props) => {
         height={300}
         className="w-32 h-auto"
       />
-      <h2 className="font-cereal text-center">{description}</h2>
+      <h2 className="font-cereal text-center  w-[80%] md:w-[60%]">
+        {description}
+      </h2>
       <Link
         href={link}
         className="text-sm text-blue-500 hover:underline hover:underline-offset-2 "

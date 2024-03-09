@@ -14,7 +14,7 @@ const Landing = () => {
           alt="VIT_MUN"
           width={1000}
           height={1000}
-          className="h-[40%] md:h-[80%] w-auto absolute -translate-y-[20%] left-1/2 -translate-x-1/2"
+          className="h-full scale-y-115 md:h-[80%] w-auto absolute -translate-y-[27%] md:-translate-y-[20%] left-1/2 -translate-x-1/2"
         />
         <div className="w-full h-[63%] relative flex flex-col gap-8 justify-center items-center">
           <Image
