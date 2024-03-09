@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
@@ -53,7 +53,12 @@ const Header = () => {
             onClick={() => setOpenMenu(true)}
           />
           {openMenu && (
-            <div className="menu w-screen min-h-fit h-screen fixed top-0 left-0 bg-white p-8">
+            <motion.div
+              className="menu w-screen min-h-fit h-screen fixed top-0 left-0 bg-white p-8"
+              initial={{ translateX: 150, opacity: 0.5 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <Image
                 src="/menu-close.webp"
                 width={100}
@@ -83,7 +88,7 @@ const Header = () => {
                   className="w-[50%] mx-auto mt-16"
                 />
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
