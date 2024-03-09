@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Heading from "@/components/common/Heading";
@@ -23,45 +23,53 @@ const Invitation = () => {
     EmailID: "",
     ContactNumber: "",
     DelegationStrength: "",
-    AllotmentPreferences: ""
+    AllotmentPreferences: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     setForm({ ...form, [e.target.id]: e.target.value });
-  }
+  };
 
-  const handleAllotmentLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAllotmentLinkChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setAllotmentLink(e.target.value);
     setForm({ ...form, AllotmentPreferences: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
     for (let key in form) {
-      if ((form[key]) === "") {
+      if (form[key] === "") {
         toast.error(`Please fill out all the fields.`);
         return;
       }
     }
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/delegate`, form)
-      toast.success(response.data.message)
-      router.push('/')
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/register/delegate`,
+        form
+      );
+      toast.success(response.data.message);
     } catch (err: any) {
-      toast.error(err.response.error.message)
+      toast.error(err.response.error.message);
     }
-  }
+  };
 
   return (
     <>
       <main className="w-full h-full min-h-fit">
-        <div className="--container w-[90%] h-full mx-auto">
+        <div className="--container w-[90%] h-full mx-auto mt-6">
           <Heading
             heading={"Request An Invite"}
-            subHeading="Fill out the form below if your delegation hasn’t received an invite yet."
+            subHeading="Fill out the form below if your delegation hasn't received an invite yet."
           />
-          <div className="--form w-[90%] mx-auto p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)] my-20">
+          <div className="--form w-[90%] mx-auto py-8 md:py-24 p-6 md:p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]  my-20">
             <form action="" onSubmit={handleSubmit}>
               <div className="--invitation-info w-full flex  justify-between flex-wrap mb-12">
                 <div className="w-full flex justify-center">
@@ -80,7 +88,13 @@ const Invitation = () => {
                   placeholder="Name"
                   label="Head Delegate"
                 />
-                <InputBox name="email" placeholder="Email" label="Email-ID" onChange={handleChange} id="EmailID" />
+                <InputBox
+                  name="email"
+                  placeholder="Email"
+                  label="Email-ID"
+                  onChange={handleChange}
+                  id="EmailID"
+                />
                 <InputBox
                   name="contact"
                   placeholder="Whatsapp Number"
@@ -96,10 +110,10 @@ const Invitation = () => {
                   id="DelegationStrength"
                 />
               </div>
-              <div className="buttons w-full flex justify-between">
+              <div className="buttons w-full flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
                 <button
                   type="button"
-                  className="px-6 py-4 rounded-lg bg-[#8e8a8a] text-white font-cereal flex gap-2"
+                  className="px-2 md:px-6 py-4 rounded-lg bg-[#8e8a8a] text-white font-cereal flex gap-2 text-sm md:text-base text-nowrap justify-center items-center"
                   onClick={() => setOpenUpload(true)}
                 >
                   <Image
@@ -107,13 +121,14 @@ const Invitation = () => {
                     alt="Arrow"
                     width={50}
                     height={50}
-                    className="w-6 h-6"
+                    className="w-4 md:w-6 aspect-square"
                   />
                   <p>Upload Allotment Preferences</p>
                 </button>
                 <div
-                  className={`${openUpload ? "block" : "hidden"
-                    } upload-allotment-preference p-8 w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
+                  className={`${
+                    openUpload ? "block" : "hidden"
+                  } upload-allotment-preference p-8 w-[80%] md:w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
                 >
                   <div className="flex flex-col gap-2 w-full mb-8">
                     <label
@@ -133,20 +148,21 @@ const Invitation = () => {
                   </div>
                   <button
                     type="button"
-                    className="bg-[#1f75bc] rounded-lg px-6 py-2 text-white font-cerealMed text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)] w-fit"
+                    className="bg-[#1f75bc] rounded-lg px-6 py-2 text-white font-cerealMed text-sm md:text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)] w-fit"
                     onClick={() => setOpenUpload(false)}
                   >
                     ADD
                   </button>
                 </div>
                 <div
-                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${openUpload ? "block" : "hidden"
-                    }`}
+                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${
+                    openUpload ? "block" : "hidden"
+                  }`}
                   onClick={() => setOpenUpload(false)}
                 ></div>
                 <button
                   type="submit"
-                  className="bg-[#1f75bc] rounded-lg px-6 py-2 text-white font-cerealMed text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]"
+                  className="bg-[#1f75bc] rounded-lg px-6 py-2 text-white font-cerealMed text-base md:text-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]"
                 >
                   REQUEST
                 </button>

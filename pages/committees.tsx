@@ -1,13 +1,12 @@
-"use client";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import Header from "@/components/common/Header";
 import React from "react";
+import { ReactLenis } from "@studio-freight/react-lenis";
+
 import NavWrapper from "@/wrappers/NavWrapper";
 import BaseWrapper from "@/wrappers/BaseWrapper";
 import MainWrapper from "@/wrappers/MainWrapper";
-import Landing from "@/screens/Landing";
-
-const index = () => {
+import Header from "@/components/common/Header";
+import Committee from "@/screens/Committee";
+const committees = () => {
   return (
     <>
       <ReactLenis
@@ -16,8 +15,6 @@ const index = () => {
           lerp: 0.04,
           duration: 2.5,
           smoothWheel: true,
-          syncTouch: true,
-          syncTouchLerp: 0.04,
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           orientation: "vertical",
         }}
@@ -27,7 +24,7 @@ const index = () => {
             <Header />
           </NavWrapper>
           <MainWrapper>
-            <Landing />
+            <Committee />
           </MainWrapper>
         </BaseWrapper>
       </ReactLenis>
@@ -35,4 +32,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default committees;

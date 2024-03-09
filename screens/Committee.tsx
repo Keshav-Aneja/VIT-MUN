@@ -50,7 +50,7 @@ const committeeData = [
 const Committee = () => {
   return (
     <div className="w-full h-full min-h-fit">
-      <div className="--container w-[90%] h-full mx-auto">
+      <div className="--container w-[90%] h-full mx-auto mt-6">
         <Heading
           heading={"Committees"}
           subHeading="Fill out the form below if you are interested in participating at VITMUN'24."
@@ -62,6 +62,8 @@ const Committee = () => {
               link={committee.link}
               img={committee.img}
               description={committee.description}
+              key={i}
+              id={i}
             />
           ))}
         </div>

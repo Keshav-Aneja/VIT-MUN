@@ -21,6 +21,9 @@ const config: Config = {
         cerealMed: "cereal-medium",
         cerealBold: "cereal-bold",
       },
+      colors: {
+        offwhite: "#edebeb",
+      },
     },
   },
   plugins: [],
