@@ -47,3 +47,13 @@ export interface InternalFormState {
   MUNExecutiveCount: string;
   MUNExecutiveExperience: string;
 }
+
+export interface DelegatesType {
+  [key: string]: string;
+  OrganizationName: string;
+  HeadDelegate: string;
+  EmailID: string;
+  ContactNumber: string;
+  DelegationStrength: string;
+  AllotmentPreferences: string;
+}

@@ -54,10 +54,10 @@ const RegisterExternal = () => {
       }
     }
     try{
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/external`, form)
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/external`, form)
       toast.success(response.data.message)
     }catch(err: any){
-      toast.error(err.response.data.message)
+      toast.error(err.response.error.message)
     }
   }
   return (
