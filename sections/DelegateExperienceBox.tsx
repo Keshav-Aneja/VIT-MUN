@@ -14,7 +14,11 @@ const DelegateExperienceBox = ({ id, onChange, boxType }: Props) => {
       <input
         type="text"
         className="text-xs md:text-base w-full rounded-xl border-2 border-black p-4 font-cereal"
-        placeholder="Number of MUNs as a Delegate"
+        placeholder={
+          id === 1
+            ? "Number of MUNs as a Delegate"
+            : "Number of MUNs as a Executive Board"
+        }
         onChange={onChange}
         id={`MUN${boxType}Count`}
       />
