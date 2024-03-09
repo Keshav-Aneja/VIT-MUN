@@ -5,12 +5,15 @@ import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Image from "next/image";
 import Help from "@/components/common/Help";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import { DelegatesType } from "@/types/form";
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 const Invitation = () => {
+
+  const router = useRouter();
+
   const [openUpload, setOpenUpload] = useState(false);
   const [allotmentLink, setAllotmentLink] = useState("");
 
@@ -44,6 +47,7 @@ const Invitation = () => {
     try {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/delegate`, form)
       toast.success(response.data.message)
+      router.push('/')
     } catch (err: any) {
       toast.error(err.response.error.message)
     }
@@ -51,7 +55,6 @@ const Invitation = () => {
 
   return (
     <>
-      <ToastContainer />
       <main className="w-full h-full min-h-fit">
         <div className="--container w-[90%] h-full mx-auto">
           <Heading

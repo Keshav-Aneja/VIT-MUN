@@ -9,12 +9,14 @@ import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
 import { ExternalFormState } from "@/types/form";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import axios from 'axios'
-
+import { useRouter } from 'next/navigation';
 
 const RegisterExternal = () => {
+
+  const router = useRouter();
+
   const [form, setForm] = useState<ExternalFormState>({
     ParticipantName: "",
     ParticipantGender: "",
@@ -56,13 +58,13 @@ const RegisterExternal = () => {
     try{
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/external`, form)
       toast.success(response.data.message)
+      router.push('/')
     }catch(err: any){
       toast.error(err.response.error.message)
     }
   }
   return (
     <>
-      <ToastContainer />
       <main className="w-full h-full min-h-fit">
         <div className="--container w-[90%] h-full mx-auto">
           <Heading

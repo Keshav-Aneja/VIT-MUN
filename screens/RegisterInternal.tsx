@@ -9,11 +9,14 @@ import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
 import { InternalFormState } from "@/types/form";
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { toast } from 'react-toastify'
 import axios from 'axios'
+import { useRouter } from 'next/navigation';
+
 
 const RegisterInternal = () => {
+  const router = useRouter();
+
   const [form, setForm] = useState<InternalFormState>({
     ParticipantName: "",
     ParticipantRegNumber: "",
@@ -53,6 +56,7 @@ const RegisterInternal = () => {
     try {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/internal`, form)
       toast.success(response.data.message)
+      router.push('/')
     } catch (err: any) {
       toast.error(err.response.error.message)
     }
@@ -60,7 +64,6 @@ const RegisterInternal = () => {
 
   return (
     <>
-      <ToastContainer />
       <main className="w-full h-full min-h-fit">
         <div className="--container w-[90%] h-full mx-auto">
           <Heading
