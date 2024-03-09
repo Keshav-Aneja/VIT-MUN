@@ -1,0 +1,82 @@
+<svg width="1214" height="729" viewBox="0 0 1214 729" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g opacity="0.36">
+<mask id="mask0_1_59934" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1214" height="729">
+<rect width="242.8" height="242.8" fill="url(#pattern0)"/>
+<rect x="242.8" width="242.8" height="242.8" fill="url(#pattern1)"/>
+<rect x="485.6" width="242.8" height="242.8" fill="url(#pattern2)"/>
+<rect x="728.4" width="242.8" height="242.8" fill="url(#pattern3)"/>
+<rect x="971.2" width="242.8" height="242.8" fill="url(#pattern4)"/>
+<rect y="242.8" width="242.8" height="242.8" fill="url(#pattern5)"/>
+<rect x="242.8" y="242.8" width="242.8" height="242.8" fill="url(#pattern6)"/>
+<rect x="485.6" y="242.8" width="242.8" height="242.8" fill="url(#pattern7)"/>
+<rect x="728.4" y="242.8" width="242.8" height="242.8" fill="url(#pattern8)"/>
+<rect x="971.2" y="242.8" width="242.8" height="242.8" fill="url(#pattern9)"/>
+<rect y="485.6" width="242.8" height="242.8" fill="url(#pattern10)"/>
+<rect x="242.8" y="485.6" width="242.8" height="242.8" fill="url(#pattern11)"/>
+<rect x="485.6" y="485.6" width="242.8" height="242.8" fill="url(#pattern12)"/>
+<rect x="728.4" y="485.6" width="242.8" height="242.8" fill="url(#pattern13)"/>
+<rect x="971.2" y="485.6" width="242.8" height="242.8" fill="url(#pattern14)"/>
+</mask>
+<g mask="url(#mask0_1_59934)">
+<rect x="-30.3501" y="-33.8519" width="1273.53" height="794.937" fill="url(#paint0_linear_1_59934)"/>
+</g>
+</g>
+<g opacity="0.5">
+<path d="M815.174 285.943C816.586 285.943 817.731 284.798 817.731 283.386C817.731 281.974 816.586 280.829 815.174 280.829C813.762 280.829 812.617 281.974 812.617 283.386C812.617 284.798 813.762 285.943 815.174 285.943Z" fill="black"/>
+<path d="M897.3 76.7853C898.712 76.7853 899.857 75.6406 899.857 74.2285C899.857 72.8164 898.712 71.6716 897.3 71.6716C895.888 71.6716 894.743 72.8164 894.743 74.2285C894.743 75.6406 895.888 76.7853 897.3 76.7853Z" fill="black"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern2" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern3" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern4" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern5" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern6" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern7" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern8" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern9" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern10" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern11" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern12" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern13" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<pattern id="pattern14" patternContentUnits="objectBoundingBox" width="0.25" height="0.25">
+<use xlink:href="#image0_1_59934" transform="scale(0.00195312)"/>
+</pattern>
+<linearGradient id="paint0_linear_1_59934" x1="-30.3501" y1="364.2" x2="1243.18" y2="364.2" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EBEBEB" stop-opacity="0.3"/>
+<stop offset="0.3" stop-color="#737373" stop-opacity="0.62"/>
+<stop offset="0.665" stop-color="#737373" stop-opacity="0.782857"/>
+<stop offset="1" stop-color="#EBEBEB" stop-opacity="0.3"/>
+</linearGradient>
+<image id="image0_1_59934" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAA2NJREFUeF7tmeFtE0EUhF+eXAAlhAoCHZAKoANEBYQKgAoIHaQEqAA6IB2QEijAWvBKRooswfgOIcUzn3/PRpmZz5O7zVnxiU7gLNo95gsAwiEAAAAITyDcPgsAAOEJhNtnAQAgPIFw+ywAAIQnEG6fBQCA8ATC7bMAABCeQLh9FgAAwhMIt88CAEB4AuH2WQAACE8g3D4LAADhCYTbZwEAIDyBcPssAACEJxBunwUAgPAEwu2zAAAQnkC4fRYAAMITCLfPAgBAeALh9lkAAAhPINw+CwAA4QmE22cBACA8gXD7LAAAhCcQbp8FAIDwBMLtswAAEJ5AuH0WAADCEwi3zwIAQHgC4fZZAAAITyDcPgsAAOEJhNtnAQAgK4HNZvNsjPGiqp5X1fne/W1V3Y4x3lfVXVIiSQvwqLvfVtWVKPh6D8KPBBBSAJjlf6mqJ0eWOtfgcgeLPQQRAHT3hyO++YdszCV4cyQwJytLAOC8u7+vaai7L7fb7dc1Z0/ljD0A3X1TVS9XFvJxjKGeGVb+6IdxLAGAbwv+9h+2cjfGePwwqvo/v0UCAD//JbrdG4F1RtbmZvG7Vz8A+Ms3IAGA+QD4+8Jn6RjM18GnSw+dkj4BgOuqer2ylJsxxquVZ0/imD0A+6vfeQm0+LN/ALS+GrYHYP8csGYF7F8BZzYRAFQVV8F/2L8UAKb9CcG7I54H5jd/6uz/D5C0APf5n1fDs+CLexdE8+/85+7+5H71ezgESQuw+CEw4QAAJLScfBEU3q+0zwLIiLwFAODdr3QHADIibwEAePcr3QGAjMhbAADe/Up3ACAj8hYAgHe/0h0AyIi8BQDg3a90BwAyIm8BAHj3K90BgIzIWwAA3v1KdwAgI/IWAIB3v9IdAMiIvAUA4N2vdAcAMiJvAQB49yvdAYCMyFsAAN79SncAICPyFgCAd7/SHQDIiLwFAODdr3QHADIibwEAePcr3QGAjMhbAADe/Up3ACAj8hYAgHe/0h0AyIi8BQDg3a90BwAyIm8BAHj3K90BgIzIWwAA3v1KdwAgI/IWAIB3v9IdAMiIvAUA4N2vdAcAMiJvAQB49yvdAYCMyFsAAN79SncAICPyFgCAd7/SHQDIiLwFAODdr3QHADIibwEAePcr3QGAjMhb8AvdS1yBCsQ4vwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

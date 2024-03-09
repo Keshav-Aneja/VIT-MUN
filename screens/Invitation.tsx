@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Image from "next/image";
 import Help from "@/components/common/Help";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { DelegatesType } from "@/types/form";
-import axios from 'axios';
+import axios from "axios";
 
 const Invitation = () => {
   const [openUpload, setOpenUpload] = useState(false);
@@ -20,34 +20,43 @@ const Invitation = () => {
     EmailID: "",
     ContactNumber: "",
     DelegationStrength: "",
-    AllotmentPreferences: ""
+    AllotmentPreferences: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     setForm({ ...form, [e.target.id]: e.target.value });
-  }
+  };
 
-  const handleAllotmentLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAllotmentLinkChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setAllotmentLink(e.target.value);
     setForm({ ...form, AllotmentPreferences: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
     for (let key in form) {
-      if ((form[key]) === "") {
+      if (form[key] === "") {
         toast.error(`Please fill out all the fields.`);
         return;
       }
     }
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register/delegate`, form)
-      toast.success(response.data.message)
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/register/delegate`,
+        form
+      );
+      toast.success(response.data.message);
     } catch (err: any) {
-      toast.error(err.response.error.message)
+      toast.error(err.response.error.message);
     }
-  }
+  };
 
   return (
     <>
@@ -77,7 +86,13 @@ const Invitation = () => {
                   placeholder="Name"
                   label="Head Delegate"
                 />
-                <InputBox name="email" placeholder="Email" label="Email-ID" onChange={handleChange} id="EmailID" />
+                <InputBox
+                  name="email"
+                  placeholder="Email"
+                  label="Email-ID"
+                  onChange={handleChange}
+                  id="EmailID"
+                />
                 <InputBox
                   name="contact"
                   placeholder="Whatsapp Number"
@@ -109,8 +124,9 @@ const Invitation = () => {
                   <p>Upload Allotment Preferences</p>
                 </button>
                 <div
-                  className={`${openUpload ? "block" : "hidden"
-                    } upload-allotment-preference p-8 w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
+                  className={`${
+                    openUpload ? "block" : "hidden"
+                  } upload-allotment-preference p-8 w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
                 >
                   <div className="flex flex-col gap-2 w-full mb-8">
                     <label
@@ -137,8 +153,9 @@ const Invitation = () => {
                   </button>
                 </div>
                 <div
-                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${openUpload ? "block" : "hidden"
-                    }`}
+                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${
+                    openUpload ? "block" : "hidden"
+                  }`}
                   onClick={() => setOpenUpload(false)}
                 ></div>
                 <button

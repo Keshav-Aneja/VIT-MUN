@@ -4,7 +4,7 @@ import BaseWrapper from "@/wrappers/BaseWrapper";
 import MainWrapper from "@/wrappers/MainWrapper";
 import Header from "@/components/common/Header";
 import Committee from "@/screens/Committee";
-const committee = () => {
+const committees = () => {
   return (
     <>
       <BaseWrapper>
@@ -19,4 +19,4 @@ const committee = () => {
   );
 };
 
-export default committee;
+export default committees;
