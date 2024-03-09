@@ -1,15 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 interface Props {
   heading: string;
   img: string;
   description: string;
   link: string;
+  id: number;
 }
-const CommitteeCard = ({ heading, img, description, link }: Props) => {
+const CommitteeCard = ({ heading, img, description, link, id }: Props) => {
   return (
-    <div className="rounded-xl shadow-[0px_0px_15px_rgba(0,0,0,0.2)] bg-white w-full md:w-[30%] p-4 mb-12 flex flex-col gap-2 items-center justify-between aspect-[1.125] hover:scale-105 transition-all duration-200 ease-linear">
+    <motion.div
+      className="rounded-xl shadow-[0px_0px_15px_rgba(0,0,0,0.2)] bg-white w-full md:w-[30%] p-4 mb-12 flex flex-col gap-2 items-center justify-between aspect-[1.125] hover:scale-105 transition-all duration-200 ease-linear"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.1 * id }}
+      viewport={{ once: true }}
+    >
       <h1 className="heading text-xl font-cerealMed">{heading}</h1>
       <Image
         src={`/committee/${img}`}
@@ -27,7 +35,7 @@ const CommitteeCard = ({ heading, img, description, link }: Props) => {
       >
         Read More
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

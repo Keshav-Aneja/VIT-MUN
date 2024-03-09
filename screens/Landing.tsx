@@ -4,6 +4,7 @@ import MarqueeBar from "@/components/MarqueeBar";
 import Link from "next/link";
 import Help from "@/components/common/Help";
 import IndividualRegPopUp from "@/components/IndividualRegPopUp";
+import { motion } from "framer-motion";
 const Landing = () => {
   const [openPopUp, setOpenPopUp] = useState(false);
   return (
@@ -41,10 +42,14 @@ const Landing = () => {
           {openPopUp && (
             <>
               <IndividualRegPopUp setOpen={setOpenPopUp} />
-              <div
+              <motion.div
                 className="overlay fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.2)] z-[200]"
                 onClick={() => setOpenPopUp(false)}
-              ></div>
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              ></motion.div>
             </>
           )}
         </div>
@@ -80,39 +85,75 @@ const Landing = () => {
         </div>
         <MarqueeBar />
       </div>
-      <div className="w-[80%] mx-auto pt-32">
+      <div className="w-[80%] mx-auto pt-32" id="about">
         <div className="--container-1 h-fit py-20 md:py-0 md:h-[60vh] flex-col md:flex-row flex justify-between">
           <section className="w-full md:w-[40%]"></section>
           <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal">
-            <h1 className="text-3xl md:text-5xl font-cerealMed mb-6">
+            <motion.h1
+              className="text-3xl md:text-5xl font-cerealMed mb-6"
+              initial={{ translateY: -40, opacity: 0 }}
+              whileInView={{ translateY: 0, opacity: 1 }}
+              transition={{ duration: 0.75, delay: 0.25 }}
+              viewport={{ once: true }}
+            >
               We at VITMUNSoc.
-            </h1>
-            <p className=" leading-6 md:leading-8 md:w-[80%]">
+            </motion.h1>
+            <motion.p
+              className=" leading-6 md:leading-8 md:w-[80%]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               The VIT Model United Nations Society (VITMUNSoc) is a model of
               excellence, teaching argumentation, diplomacy, public speaking,
               and more to its members and the VIT student community.
-            </p>
-            <p className=" leading-6 md:leading-8 md:w-[80%]">
+            </motion.p>
+            <motion.p
+              className=" leading-6 md:leading-8 md:w-[80%]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               It has become one of India's top MUN societies, winning awards
               with each effort.
-            </p>
+            </motion.p>
           </section>
         </div>
         <div className="--container-2 h-fit py-20 md:py-0 md:h-[60vh] flex flex-col md:flex-row justify-between">
           <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal">
-            <h1 className="text-3xl md:text-5xl font-cerealMed mb-6">
+            <motion.h1
+              className="text-3xl md:text-5xl font-cerealMed mb-6"
+              initial={{ translateY: -40, opacity: 0 }}
+              whileInView={{ translateY: 0, opacity: 1 }}
+              transition={{ duration: 0.75, delay: 0.25 }}
+              viewport={{ once: true }}
+            >
               Delegate at VITMUN.
-            </h1>
-            <p className=" leading-6 md:leading-8 md:w-[80%]">
+            </motion.h1>
+            <motion.p
+              className=" leading-6 md:leading-8 md:w-[80%]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               Choose VITMUN'24 for immersive simulations, skill refinement, and
               cultural awareness. Elevate your leadership potential amidst a
               diverse cohort.
-            </p>
-            <p className="leading-6 md:leading-8 md:w-[80%]">
+            </motion.p>
+            <motion.p
+              className="leading-6 md:leading-8 md:w-[80%]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               With extensive exposure and industry engagement, it's more than
               just a conference—it's a pathway to global impact and personal
               growth.
-            </p>
+            </motion.p>
           </section>
           <section className="w-full md:w-[40%]"></section>
         </div>

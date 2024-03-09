@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 const Header = () => {
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <>
@@ -18,16 +20,30 @@ const Header = () => {
             />
           </Link>
           <div className="md:ml-auto flex flex-wrap items-center w-full md:w-fit justify-between md:justify-center text-black  md:gap-24 text-sm md:text-base">
-            <Link className="" href="/committees">
+            <Link
+              className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear ${
+                pathname === "/committees" ? "text-blue-500" : ""
+              }`}
+              href="/committees"
+            >
               COMMITTEES
             </Link>
-            <Link className=" " href="/about">
+            <Link
+              className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
+              href="/#about"
+            >
               ABOUT US
             </Link>
-            <Link className=" " href="resources">
+            <Link
+              className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
+              href="resources"
+            >
               RESOURCES
             </Link>
-            <Link className=" " href="faqs">
+            <Link
+              className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
+              href="faqs"
+            >
               FAQs
             </Link>
           </div>
@@ -71,7 +87,7 @@ const Header = () => {
                 <Link className=" " href="/committees">
                   COMMITTEES
                 </Link>
-                <Link className=" " href="/about">
+                <Link className=" " href="/#about">
                   ABOUT US
                 </Link>
                 <Link className=" " href="resources">

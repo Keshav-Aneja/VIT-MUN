@@ -1,12 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const IndividualRegPopUp = ({ setOpen }: Props) => {
   return (
-    <div className="w-[80%] md:w-[30vw] p-8 pt-12 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl shadow-2xl bg-white flex flex-col gap-4 z-[250]">
+    <motion.div
+      className="w-[80%] md:w-[30vw] p-8 pt-12 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl shadow-2xl bg-white flex flex-col gap-4 z-[250]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <Image
         src="/menu-close.webp"
         width={100}
@@ -31,7 +38,7 @@ const IndividualRegPopUp = ({ setOpen }: Props) => {
           EXTERNAL PARTICIPANTS
         </button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

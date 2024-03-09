@@ -62,6 +62,8 @@ const Committee = () => {
               link={committee.link}
               img={committee.img}
               description={committee.description}
+              key={i}
+              id={i}
             />
           ))}
         </div>
