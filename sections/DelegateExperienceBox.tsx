@@ -29,7 +29,7 @@ const DelegateExperienceBox = ({ id, onChange, boxType }: Props) => {
         id={`MUN${boxType}Experience`}
         placeholder="Format : 
         Conference Name/Year - Committee - Country - Award
-          (Leave Blank if None)"
+          (Write N/A if None)"
       ></textarea>
     </div>
   );

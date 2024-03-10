@@ -22,30 +22,38 @@ const Header = () => {
           <div className="md:ml-auto flex flex-wrap items-center w-full md:w-fit justify-between md:justify-center text-black  md:gap-24 text-sm md:text-base">
             <Link
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear ${
+                pathname === "/" ? "text-blue-500" : ""
+              }`}
+              href="/"
+            >
+              HOME
+            </Link>
+            <Link
+              className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear ${
                 pathname === "/committees" ? "text-blue-500" : ""
               }`}
               href="/committees"
             >
               COMMITTEES
             </Link>
-            <Link
+            {/* <Link
               className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
               href="/#about"
             >
               ABOUT US
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
               href="resources"
             >
               RESOURCES
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               className="border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear"
               href="faqs"
             >
               FAQs
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -84,10 +92,13 @@ const Header = () => {
                 onClick={() => setOpenMenu(false)}
               />
               <div className="--menu-items  flex flex-col h-full mt-24 w-full text-center gap-6 text-xl font-cerealMed tracking-wide">
+                <Link className=" " href="/">
+                  HOME
+                </Link>
                 <Link className=" " href="/committees">
                   COMMITTEES
                 </Link>
-                <Link className=" " href="/#about">
+                {/* <Link className=" " href="/#about">
                   ABOUT US
                 </Link>
                 <Link className=" " href="resources">
@@ -95,7 +106,7 @@ const Header = () => {
                 </Link>
                 <Link className=" " href="faqs">
                   FAQs
-                </Link>
+                </Link> */}
                 <Image
                   src="/vit-mun-logo.webp"
                   alt="logo"

@@ -9,12 +9,11 @@ import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
 import { ExternalFormState } from "@/types/form";
-import { toast } from 'react-toastify';
-import axios from 'axios'
-import { useRouter } from 'next/navigation';
+import { toast } from "react-toastify";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const RegisterExternal = () => {
-
   const router = useRouter();
 
   const [form, setForm] = useState<ExternalFormState>({
@@ -65,7 +64,7 @@ const RegisterExternal = () => {
         form
       );
       toast.success(response.data.message);
-      router.push('/')
+      router.push("/");
     } catch (err: any) {
       toast.error(err.response.data.message);
     }
@@ -162,7 +161,7 @@ const RegisterExternal = () => {
               </div>
               <div className="--delegate-experience">
                 <div className="mb-6">
-                  <SectionHeading heading="Delegate Experience" />
+                  <SectionHeading heading="Experience" />
                 </div>
                 <DelegateExperienceBox
                   id={1}

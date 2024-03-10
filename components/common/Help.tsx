@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const Help = () => {
   return (
     <>
@@ -26,7 +27,18 @@ const Help = () => {
               >
                 We're here to help. Reach out to us via our official
                 <span className="text-blue-600">
-                  &nbsp;Instagram, LinkedIn&nbsp;
+                  &nbsp;
+                  <Link
+                    href="https://www.instagram.com/vitmunsoc?igsh=dDF6bWVoOGxmdW5i"
+                    target="_blank"
+                  >
+                    Instagram
+                  </Link>
+                  ,{" "}
+                  <Link href="https://www.linkedin.com/company/munsocvit/">
+                    LinkedIn
+                  </Link>
+                  &nbsp;
                 </span>
                 and <span className="text-blue-600">Email.</span>
               </motion.div>
@@ -37,7 +49,8 @@ const Help = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                If you want to speak to us over the phone, you can contact:
+                If you require any help with the registration process or
+                delegate affairs, you can mail at:
               </motion.div>
               <motion.div
                 className="mb-8 leading-relaxed text-blue-600"
@@ -46,9 +59,9 @@ const Help = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                Avyukt H Agrawal : +91-8903689328
-                <br />
-                Aniket R Perai: +91-9650686499
+                <a href="mailto:help.delegateaffairs@gmail.com">
+                  help.delegateaffairs@gmail.com
+                </a>
               </motion.div>
             </div>
           </section>

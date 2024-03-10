@@ -9,11 +9,10 @@ import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
 import { InternalFormState } from "@/types/form";
-import { toast } from 'react-toastify'
-import axios from 'axios'
-import { useRouter } from 'next/navigation';
-
-
+import { toast } from "react-toastify";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 const RegisterInternal = () => {
   const router = useRouter();
 
@@ -63,11 +62,10 @@ const RegisterInternal = () => {
         form
       );
       toast.success(response.data.message);
-      router.push('/')
+      router.push("/");
     } catch (err: any) {
       toast.error(err.response.data.message);
     }
-  
   };
 
   return (
@@ -113,7 +111,9 @@ const RegisterInternal = () => {
               <div className="--delegate-preference mb-12">
                 <div className="flex gap-1 md:gap-4 flex-col md:flex-row">
                   <SectionHeading heading="Delegate Preference" />
-                  <Labels label="COUNTRY MATRIX" />
+                  <Link href="https://docs.google.com/spreadsheets/d/1Li_euF7cmIb-GDwbUkA7NpRPcodf4x7OLDlM8I3l8IU/edit?usp=sharing">
+                    <Labels label="COUNTRY MATRIX" />
+                  </Link>
                 </div>
                 <DelegatePreferenceBox id={1} onChange={handleChange} />
                 <DelegatePreferenceBox id={2} onChange={handleChange} />
@@ -121,7 +121,7 @@ const RegisterInternal = () => {
               </div>
               <div className="--delegate-experience">
                 <div className="mb-6">
-                  <SectionHeading heading="Delegate Experience" />
+                  <SectionHeading heading="Experience" />
                 </div>
                 <DelegateExperienceBox
                   id={1}
