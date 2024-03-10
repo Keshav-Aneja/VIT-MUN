@@ -5,13 +5,12 @@ import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Image from "next/image";
 import Help from "@/components/common/Help";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { DelegatesType } from "@/types/form";
-import axios from 'axios';
-import { useRouter } from 'next/navigation';
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Invitation = () => {
-
   const router = useRouter();
 
   const [openUpload, setOpenUpload] = useState(false);
@@ -23,7 +22,7 @@ const Invitation = () => {
     EmailID: "",
     ContactNumber: "",
     DelegationStrength: "",
-    AllotmentPreferences: "",
+    // AllotmentPreferences: "",
   });
 
   const handleChange = (
@@ -56,7 +55,7 @@ const Invitation = () => {
         form
       );
       toast.success(response.data.message);
-      router.push('/');
+      router.push("/");
     } catch (err: any) {
       toast.error(err.response.data.message);
     }
@@ -111,8 +110,8 @@ const Invitation = () => {
                   id="DelegationStrength"
                 />
               </div>
-              <div className="buttons w-full flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
-                <button
+              <div className="buttons w-full flex flex-col md:flex-row gap-4 md:gap-0 justify-center">
+                {/* <button
                   type="button"
                   className={`px-2 md:px-6 py-4 rounded-lg ${allotmentLink ? 'bg-green-600' : 'bg-[#8e8a8a]'} text-white font-cereal flex gap-2 text-sm md:text-base text-nowrap justify-center items-center`}
                   onClick={() => setOpenUpload(true)}
@@ -130,10 +129,11 @@ const Invitation = () => {
                     <p>Uploaded! Change?</p>
                   )
                   }
-                </button>
+                </button> */}
                 <div
-                  className={`${openUpload ? "block" : "hidden"
-                    } upload-allotment-preference p-8 w-[80%] md:w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
+                  className={`${
+                    openUpload ? "block" : "hidden"
+                  } upload-allotment-preference p-8 w-[80%] md:w-[40%] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-xl  shadow-[0px_0px_15px_rgba(0,0,0,0.2)] rounded-xl z-[250] flex flex-col items-end`}
                 >
                   <div className="flex flex-col gap-2 w-full mb-8">
                     <label
@@ -160,8 +160,9 @@ const Invitation = () => {
                   </button>
                 </div>
                 <div
-                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${openUpload ? "block" : "hidden"
-                    }`}
+                  className={`overlay bg-[rgba(0,0,0,0.2)] fixed top-0 left-0 w-screen h-screen z-[200] ${
+                    openUpload ? "block" : "hidden"
+                  }`}
                   onClick={() => setOpenUpload(false)}
                 ></div>
                 <button

@@ -87,7 +87,15 @@ const Landing = () => {
       </div>
       <div className="w-[80%] mx-auto pt-32" id="about">
         <div className="--container-1 h-fit py-20 md:py-0 md:h-[60vh] flex-col md:flex-row flex justify-between">
-          <section className="w-full md:w-[40%]"></section>
+          <section className="w-full md:w-[40%]">
+            <Image
+              src="/Banner_Img2.webp"
+              width={600}
+              height={600}
+              alt=""
+              className="h-[70%] w-[95%]"
+            />
+          </section>
           <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal">
             <motion.h1
               className="text-3xl md:text-5xl font-cerealMed mb-6"
@@ -155,7 +163,15 @@ const Landing = () => {
               growth.
             </motion.p>
           </section>
-          <section className="w-full md:w-[40%]"></section>
+          <section className="w-full md:w-[40%]">
+            <Image
+              src="/Banner_Img.webp"
+              width={600}
+              height={600}
+              alt=""
+              className="h-[70%] w-[95%]"
+            />
+          </section>
         </div>
       </div>
       <Help />

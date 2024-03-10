@@ -8,13 +8,13 @@ const MarqueeBar = () => {
         <div className="w-full flex gap-12 font-cerealBold text-sm md:text-base">
           <p className="ml-12">WHERE YOUR VOICE MATTERS</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
-          <p>ONE OF THE BIGGEST MUN IN SOUTH INDIA</p>
+          <p>WE ARE BACK AFTER 5 YEARS</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
           <p>ROAD TO VITMUN</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
           <p>WHERE YOUR VOICE MATTERS</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
-          <p>ONE OF THE BIGGEST MUN IN SOUTH INDIA</p>
+          <p>WE ARE BACK AFTER 5 YEARS</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />
           <p>ROAD TO VITMUN</p>
           <Image src="/star.svg" alt="star" width={20} height={20} />

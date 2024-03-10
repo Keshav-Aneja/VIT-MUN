@@ -4,6 +4,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>VITMUN'24</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <body>
         <Main />

@@ -12,7 +12,7 @@ const committeeData = [
   {
     heading: "CHAOS",
     img: "CHAOS.webp",
-    description: "Global Crisis Sparks esperate Efforts",
+    description: "Global Crisis Sparks Desperate Efforts",
     link: "/",
   },
   {

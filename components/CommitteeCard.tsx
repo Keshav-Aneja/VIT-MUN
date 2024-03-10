@@ -26,15 +26,15 @@ const CommitteeCard = ({ heading, img, description, link, id }: Props) => {
         height={300}
         className="w-32 h-auto"
       />
-      <h2 className="font-cereal text-center  w-[80%] md:w-[60%]">
+      <h2 className="font-cereal text-center  w-[80%] md:w-[60%] mb-2">
         {description}
       </h2>
-      <Link
+      {/* <Link
         href={link}
         className="text-sm text-blue-500 hover:underline hover:underline-offset-2 "
       >
         Read More
-      </Link>
+      </Link> */}
     </motion.div>
   );
 };
