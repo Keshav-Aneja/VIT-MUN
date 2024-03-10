@@ -53,7 +53,7 @@ const Committee = () => {
       <div className="--container w-[90%] h-full mx-auto mt-6">
         <Heading
           heading={"Committees"}
-          subHeading="Fill out the form below if you are interested in participating at VITMUN'24."
+          subHeading="Presenting the Committees for VITMUN&apos;24!"
         />
         <div className=" w-[90%] mx-auto  my-20 flex justify-start gap-[3%] flex-wrap">
           {committeeData.map((committee, i) => (
