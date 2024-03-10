@@ -20,34 +20,34 @@ const DelegatePreferenceBox = ({ onChange, id }: Props) => {
           Committee Preference {id}
         </option>
         <option
-          value="CHAOS: Council to Halt Annihilation of States
+          value="Council to Halt Annihilation of States (CHAOS)
 "
         >
-          CHAOS: Council to Halt Annihilation of States
+          Council to Halt Annihilation of States (CHAOS)
         </option>
         <option
-          value="JIC-SM: Joint Intelligence Command Special Meeting
+          value="Joint Intelligence Command Special Meeting (JIC-SM)
 "
         >
-          JIC-SM: Joint Intelligence Command Special Meeting
+          Joint Intelligence Command Special Meeting (JIC-SM)
         </option>
         <option
-          value="UNSC (United Nations Security Council)
+          value="United Nations Security Council (UNSC)
 "
         >
-          UNSC (United Nations Security Council)
+          United Nations Security Council (UNSC)
         </option>
         <option
-          value="SOCHUM (Social, Humanitarian and Cultural Committee)
+          value="Social, Humanitarian and Cultural Committee (SOCHUM)
 "
         >
-          SOCHUM (Social, Humanitarian and Cultural Committee)
+          Social, Humanitarian and Cultural Committee (SOCHUM)
         </option>
         <option
-          value="ECOSOC (Economic and Social Council)
+          value="Economic and Social Council (ECOSOC)
 "
         >
-          ECOSOC (Economic and Social Council)
+          Economic and Social Council (ECOSOC)
         </option>
         <option
           value="Lok Sabha
