@@ -86,8 +86,8 @@ const Landing = () => {
         <MarqueeBar />
       </div>
       <div className="w-[80%] mx-auto pt-32" id="about">
-        <div className="--container-1 h-fit py-20 md:py-0 md:h-[60vh] flex-col md:flex-row flex justify-between">
-          <section className="w-full md:w-[40%]">
+        <div className="--container-1 h-fit pb-20 md:py-0 md:h-[60vh] flex-col md:flex-row flex justify-between gap-8 md:gap-0">
+          <section className="w-full md:w-[40%] order-1 ">
             <Image
               src="/Banner_Img2.webp"
               width={600}
@@ -96,7 +96,7 @@ const Landing = () => {
               className="h-[70%] w-[95%]"
             />
           </section>
-          <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal">
+          <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal md:order-2">
             <motion.h1
               className="text-3xl md:text-5xl font-cerealMed mb-6"
               initial={{ translateY: -40, opacity: 0 }}
@@ -129,7 +129,7 @@ const Landing = () => {
             </motion.p>
           </section>
         </div>
-        <div className="--container-2 h-fit py-20 md:py-0 md:h-[60vh] flex flex-col md:flex-row justify-between">
+        <div className="--container-2 h-fit pb-12 md:py-0 md:h-[60vh] flex flex-col md:flex-row justify-between gap-8 md:gap-0">
           <section className="w-full md:w-[50%] flex gap-4 flex-col text-sm md:text-base font-cereal">
             <motion.h1
               className="text-3xl md:text-5xl font-cerealMed mb-6"
