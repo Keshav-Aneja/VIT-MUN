@@ -67,6 +67,7 @@ const RegisterInternal = () => {
     } catch (err: any) {
       toast.error(err.response.error.message);
     }
+  
   };
 
   return (
