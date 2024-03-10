@@ -28,19 +28,31 @@ const Help = () => {
                 We're here to help. Reach out to us via our official
                 <span className="text-blue-600">
                   &nbsp;
-                  <Link
+                  <a
                     href="https://www.instagram.com/vitmunsoc?igsh=dDF6bWVoOGxmdW5i"
                     target="_blank"
                   >
                     Instagram
-                  </Link>
+                  </a>
                   ,{" "}
-                  <Link href="https://www.linkedin.com/company/munsocvit/">
+                  <a
+                    href="https://www.linkedin.com/company/munsocvit/"
+                    target="_blank"
+                  >
                     LinkedIn
-                  </Link>
+                  </a>
                   &nbsp;
                 </span>
-                and <span className="text-blue-600">Email.</span>
+                and{" "}
+                <span className="text-blue-600">
+                  <a
+                    href="mailto:help.delegateaffairs@gmail.com"
+                    target="_blank"
+                  >
+                    Email
+                  </a>
+                  .
+                </span>
               </motion.div>
               <motion.div
                 className="mb-4 md:mb-8 leading-relaxed"
@@ -59,7 +71,7 @@ const Help = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                <a href="mailto:help.delegateaffairs@gmail.com">
+                <a href="mailto:help.delegateaffairs@gmail.com" target="_blank">
                   help.delegateaffairs@gmail.com
                 </a>
               </motion.div>

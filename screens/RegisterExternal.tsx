@@ -153,7 +153,12 @@ const RegisterExternal = () => {
               <div className="--delegate-preference mb-12">
                 <div className="flex gap-1 md:gap-4 flex-col md:flex-row">
                   <SectionHeading heading="Delegate Preference" />
-                  <Labels label="COUNTRY MATRIX" />
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1Li_euF7cmIb-GDwbUkA7NpRPcodf4x7OLDlM8I3l8IU/edit?usp=sharing"
+                    target="_blank"
+                  >
+                    <Labels label="COUNTRY MATRIX" />
+                  </a>
                 </div>
                 <DelegatePreferenceBox id={1} onChange={handleChange} />
                 <DelegatePreferenceBox id={2} onChange={handleChange} />
