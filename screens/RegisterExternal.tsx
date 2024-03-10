@@ -67,7 +67,7 @@ const RegisterExternal = () => {
       toast.success(response.data.message);
       router.push('/')
     } catch (err: any) {
-      toast.error(err.response.error.message);
+      toast.error(err.response.data.message);
     }
   };
   return (
