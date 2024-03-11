@@ -5,6 +5,7 @@ import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Labels from "@/components/common/Labels";
 import SectionHeading from "@/components/common/SectionHeading";
+import SectionSubHeading from "@/components/common/SectionSubHeading";
 import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
@@ -118,6 +119,7 @@ const RegisterInternal = () => {
                     <Labels label="COUNTRY MATRIX" />
                   </a>
                 </div>
+                <SectionSubHeading heading="(Registration fee per delegate is Rs. 1900 (inclusive of GST, payment link will be mailed once allotment is confirmed)" />
                 <DelegatePreferenceBox id={1} onChange={handleChange} />
                 <DelegatePreferenceBox id={2} onChange={handleChange} />
                 <DelegatePreferenceBox id={3} onChange={handleChange} />

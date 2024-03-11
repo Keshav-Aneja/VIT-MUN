@@ -5,6 +5,7 @@ import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
 import Labels from "@/components/common/Labels";
 import SectionHeading from "@/components/common/SectionHeading";
+import SectionSubHeading from "@/components/common/SectionSubHeading";
 import DelegatePreferenceBox from "@/sections/DelegatePreferenceBox";
 import DelegateExperienceBox from "@/sections/DelegateExperienceBox";
 import Help from "@/components/common/Help";
@@ -153,6 +154,7 @@ const RegisterExternal = () => {
               <div className="--delegate-preference mb-12">
                 <div className="flex gap-1 md:gap-4 flex-col md:flex-row">
                   <SectionHeading heading="Delegate Preference" />
+
                   <a
                     href="https://docs.google.com/spreadsheets/d/1Li_euF7cmIb-GDwbUkA7NpRPcodf4x7OLDlM8I3l8IU/edit?usp=sharing"
                     target="_blank"
@@ -160,6 +162,7 @@ const RegisterExternal = () => {
                     <Labels label="COUNTRY MATRIX" />
                   </a>
                 </div>
+                <SectionSubHeading heading="(Registration fee per delegate is Rs. 1900 (inclusive of GST, payment link will be mailed once allotment is confirmed)" />
                 <DelegatePreferenceBox id={1} onChange={handleChange} />
                 <DelegatePreferenceBox id={2} onChange={handleChange} />
                 <DelegatePreferenceBox id={3} onChange={handleChange} />
