@@ -162,7 +162,7 @@ const RegisterExternal = () => {
                     <Labels label="COUNTRY MATRIX" />
                   </a>
                 </div>
-                <SectionSubHeading heading="(Registration fee per delegate is Rs. 1900 (inclusive of GST, payment link will be mailed once allotment is confirmed)" />
+                <SectionSubHeading heading="Registration fee per delegate is Rs. 1900 (inclusive of GST). Payment link will be mailed once allotment is confirmed" />
                 <DelegatePreferenceBox id={1} onChange={handleChange} />
                 <DelegatePreferenceBox id={2} onChange={handleChange} />
                 <DelegatePreferenceBox id={3} onChange={handleChange} />
