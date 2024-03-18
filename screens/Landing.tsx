@@ -19,7 +19,7 @@ const Landing = () => {
         />
         <div className="w-full h-[63%] relative flex flex-col gap-8 justify-center items-center">
           <Image
-            src="/vit-mun-logo.webp"
+            src="/updated-vit-mun-logo.webp"
             alt="VIT_MUN"
             width={1000}
             height={1000}
