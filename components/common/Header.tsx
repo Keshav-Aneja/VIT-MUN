@@ -108,7 +108,7 @@ const Header = () => {
                   FAQs
                 </Link> */}
                 <Image
-                  src="/vit-mun-logo.webp"
+                  src="/updated-vit-mun-logo.webp"
                   alt="logo"
                   width={200}
                   height={100}
