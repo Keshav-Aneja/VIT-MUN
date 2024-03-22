@@ -79,46 +79,44 @@ const RegisterInternal = () => {
             subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN24."
           />
           <div className="--form w-[90%] mx-auto py-8 md:py-24 p-6 md:p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]  my-20">
-            <h1 className=" text-4xl font-medium font-cerealMed text-center">
+            <h1 className="text-2xl md:text-4xl font-medium font-cerealMed text-center">
               Round 1 Registrations have
               <span className="text-red-500">&nbsp;closed!</span>
             </h1>
 
-            <h2 className="text-2xl font-medium font-cerealMed text-center mt-6">
-              Stay tuned on our socials, to get updates
-              <br />
-              on
+            <h2 className="text-base md:text-2xl font-medium font-cerealMed text-center mt-6 w-full md:w-[50%] mx-auto">
+              Stay tuned on our socials, to get updates on
               <span className="text-blue-500">
                 &nbsp;Round 2 registrations&nbsp;
               </span>
               and VITMUN.
             </h2>
             <div className="flex justify-center gap-8 mt-8">
-              <Link href="">
+              <Link href="https://www.instagram.com/vitmunsoc/">
                 <Image
                   src="/insta.svg"
                   alt="instagram"
                   width={50}
                   height={50}
-                  className="w-8 aspect-square"
+                  className="w-6 md:w-8 aspect-square"
                 />
               </Link>
-              <Link href="">
+              <Link href="https://www.linkedin.com/company/munsocvit/">
                 <Image
                   src="/linkedin.svg"
                   alt="linkedin"
                   width={50}
                   height={50}
-                  className="w-8 aspect-square"
+                  className="w-6 md:w-8 aspect-square"
                 />
               </Link>
-              <Link href="">
+              <Link href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://medium.com/vitmunsoc&ved=2ahUKEwj-yOLpg4iFAxUBxTgGHXlsCp0Qjjh6BAgqEAE&usg=AOvVaw1A-jFkMjwUMc31nin20O4v">
                 <Image
                   src="/social.svg"
-                  alt="instagram"
+                  alt="Medium"
                   width={50}
                   height={50}
-                  className="w-8 aspect-square"
+                  className="w-6 md:w-8 aspect-square"
                 />
               </Link>
             </div>
