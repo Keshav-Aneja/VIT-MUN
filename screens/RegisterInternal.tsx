@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 const RegisterInternal = () => {
   const router = useRouter();
 
@@ -78,7 +79,50 @@ const RegisterInternal = () => {
             subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN24."
           />
           <div className="--form w-[90%] mx-auto py-8 md:py-24 p-6 md:p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]  my-20">
-            <form action="" onSubmit={handleSubmit}>
+            <h1 className=" text-4xl font-medium font-cerealMed text-center">
+              Round 1 Registrations have
+              <span className="text-red-500">&nbsp;closed!</span>
+            </h1>
+
+            <h2 className="text-2xl font-medium font-cerealMed text-center mt-6">
+              Stay tuned on our socials, to get updates
+              <br />
+              on
+              <span className="text-blue-500">
+                &nbsp;Round 2 registrations&nbsp;
+              </span>
+              and VITMUN.
+            </h2>
+            <div className="flex justify-center gap-8 mt-8">
+              <Link href="">
+                <Image
+                  src="/insta.svg"
+                  alt="instagram"
+                  width={50}
+                  height={50}
+                  className="w-8 aspect-square"
+                />
+              </Link>
+              <Link href="">
+                <Image
+                  src="/linkedin.svg"
+                  alt="linkedin"
+                  width={50}
+                  height={50}
+                  className="w-8 aspect-square"
+                />
+              </Link>
+              <Link href="">
+                <Image
+                  src="/social.svg"
+                  alt="instagram"
+                  width={50}
+                  height={50}
+                  className="w-8 aspect-square"
+                />
+              </Link>
+            </div>
+            {/* <form action="" onSubmit={handleSubmit}>
               <div className="--participants-info w-full flex  justify-between flex-wrap mb-12">
                 <InputBox
                   name="participant_name"
@@ -147,7 +191,7 @@ const RegisterInternal = () => {
                   PRESENT AND VOTING
                 </button>
               </div>
-            </form>
+            </form> */}
           </div>
           <Help />
         </div>
