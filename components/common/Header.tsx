@@ -72,12 +72,13 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link
+            <a
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
               href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
+              target="_blank"
             >
               ALLOTMENTS
-            </Link>
+            </a>
             <Link
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
               href="/teams"
@@ -193,12 +194,13 @@ const Header = () => {
                     </motion.div>
                   )}
                 </div>
-                <Link
+                <a
+                  target="_blank"
                   className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
                   href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
                 >
                   ALLOTMENTS
-                </Link>
+                </a>
                 <Link
                   className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
                   href="/teams"
