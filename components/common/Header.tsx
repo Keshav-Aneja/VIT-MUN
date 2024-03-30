@@ -20,7 +20,7 @@ const Header = () => {
               className="h-[60%] w-auto"
             />
           </Link>
-          <div className="md:ml-auto flex flex-wrap items-center w-full md:w-fit justify-between md:justify-center text-black  md:gap-16 text-sm md:text-base">
+          <div className="md:ml-auto flex flex-wrap items-center w-full md:w-fit justify-between md:justify-center text-black  lg:gap-16 text-sm md:text-base">
             <Link
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear ${
                 pathname === "/" ? "text-blue-500" : ""
@@ -74,7 +74,7 @@ const Header = () => {
             </div>
             <Link
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
-              href="/"
+              href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
             >
               ALLOTMENTS
             </Link>
@@ -195,7 +195,7 @@ const Header = () => {
                 </div>
                 <Link
                   className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
-                  href="/"
+                  href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
                 >
                   ALLOTMENTS
                 </Link>
