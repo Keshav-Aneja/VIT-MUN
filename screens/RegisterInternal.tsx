@@ -79,7 +79,7 @@ const RegisterInternal = () => {
             subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN24."
           />
           <div className="--form w-[90%] mx-auto py-8 md:py-24 p-6 md:p-24 bg-white rounded-xl shadow-[0px_0px_20px_rgba(31,117,188,0.5)]  my-20">
-            <h1 className="text-2xl md:text-4xl font-medium font-cerealMed text-center">
+            {/* <h1 className="text-2xl md:text-4xl font-medium font-cerealMed text-center">
               Round 1 Registrations have
               <span className="text-red-500">&nbsp;closed!</span>
             </h1>
@@ -119,8 +119,8 @@ const RegisterInternal = () => {
                   className="w-6 md:w-8 aspect-square"
                 />
               </Link>
-            </div>
-            {/* <form action="" onSubmit={handleSubmit}>
+            </div> */}
+            <form action="" onSubmit={handleSubmit}>
               <div className="--participants-info w-full flex  justify-between flex-wrap mb-12">
                 <InputBox
                   name="participant_name"
@@ -189,7 +189,7 @@ const RegisterInternal = () => {
                   PRESENT AND VOTING
                 </button>
               </div>
-            </form> */}
+            </form>
           </div>
           <Help />
         </div>
