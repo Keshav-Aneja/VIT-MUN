@@ -10,7 +10,7 @@ const Teams = () => {
         <div className="--container w-[90%] h-full mx-auto mt-6">
           <Heading
             heading={"Organizing Team"}
-            subHeading="Fill out the form below if you are a student of VIT Vellore, and want to participate in VITMUN'24"
+            subHeading="The unsung heroes behind the scenes, the organizing team, work tirelessly to orchestrate every detail, ensuring the event runs smoothly from start to finish."
           />
           <div className="w-full mx-auto my-20">
             <h1 className="text-2xl font-cerealMed mb-8">Faculty Body</h1>
