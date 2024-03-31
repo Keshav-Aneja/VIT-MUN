@@ -74,17 +74,17 @@ const Header = () => {
             </div>
             <a
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
-              href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
+              href="https://docs.google.com/spreadsheets/d/1Li_euF7cmIb-GDwbUkA7NpRPcodf4x7OLDlM8I3l8IU/edit?usp=drivesdk"
               target="_blank"
             >
               ALLOTMENTS
             </a>
-            <Link
+            {/* <Link
               className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
               href="/teams"
             >
               TEAM
-            </Link>
+            </Link> */}
             <a href="https://events.vit.ac.in/events/Vitmun24/" target="_blank">
               <button
                 type="button"
@@ -197,16 +197,16 @@ const Header = () => {
                 <a
                   target="_blank"
                   className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
-                  href="https://docs.google.com/spreadsheets/d/1aiDSyScuZ9J1AyNFewX935Ekf8zwIBEgj-7i9KgCrQI/edit?usp=drivesdk"
+                  href="https://docs.google.com/spreadsheets/d/1Li_euF7cmIb-GDwbUkA7NpRPcodf4x7OLDlM8I3l8IU/edit?usp=drivesdk"
                 >
                   ALLOTMENTS
                 </a>
-                <Link
+                {/* <Link
                   className={`border-b-2 border-transparent hover:border-black transition-all duration-200 ease-linear `}
                   href="/teams"
                 >
                   TEAM
-                </Link>
+                </Link> */}
                 <a
                   href="https://events.vit.ac.in/events/Vitmun24/"
                   target="_blank"
