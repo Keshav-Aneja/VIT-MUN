@@ -54,7 +54,10 @@ const Header = () => {
               )}
               {openResourceMenu && (
                 <div className="--menu p-2 bg-white text-black absolute top-8 left-0 border-[1px] border-[#aeaeae] rounded-lg">
-                  <a href="">
+                  <a
+                    href="https://drive.google.com/drive/folders/1iLnvGFOWOIn7IVTkzTJXZMTk7XvjtHea"
+                    target="_blank"
+                  >
                     <button className="px-6 py-2 bg-[rgba(203, 203, 203, 0.8)] text-xs text-nowrap hover:bg-[rgba(203,203,203,0.6)] transition-all duration-200 ease-linear rounded-md w-full">
                       BACKGROUND GUIDES
                     </button>
@@ -176,7 +179,10 @@ const Header = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 1 }}
                     >
-                      <a href="">
+                      <a
+                        href="https://drive.google.com/drive/folders/1iLnvGFOWOIn7IVTkzTJXZMTk7XvjtHea"
+                        target="_blank"
+                      >
                         <button className="px-6 py-2  text-xs text-nowrap bg-[rgba(203,203,203,0.6)] transition-all duration-200 ease-linear rounded-md w-full">
                           BACKGROUND GUIDES
                         </button>
