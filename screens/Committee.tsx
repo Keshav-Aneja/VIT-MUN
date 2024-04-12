@@ -81,7 +81,10 @@ const Committee = () => {
               agenda={committeeCardData[showIndex].agenda}
               positions={committeeCardData[showIndex].positions}
             />
-            <div className="bg-[rgba(0,0,0,0.2)] backdrop-blur-sm w-full h-full fixed top-0 left-0 z-[200]" onClick={() => setShow(false)}></div>
+            <div
+              className="bg-[rgba(0,0,0,0.2)] backdrop-blur-sm w-full h-full fixed top-0 left-0 z-[200]"
+              onClick={() => setShow(false)}
+            ></div>
           </>
         )}
         <Help />
@@ -102,7 +105,7 @@ const committeeCardData = [
     ],
     description:
       "Experience a dynamic MUN simulation of the Joint Intelligence Command. Special meeting unites intelligence committees for strategic discussions, fostering collaboration and informed decision-making in global security matters.",
-    agenda: ["Special Meeting on the 20th ofMay 2010 - Codename Mendax"],
+    agenda: ["Special Meeting on the 20th of May 2010 - Codename Mendax"],
   },
   {
     heading: "Council to Halt the Annihilation of States",
@@ -122,7 +125,7 @@ const committeeCardData = [
     positions: [
       {
         position: "Co-Chairpersons",
-        name: "Abhishek Suudke and Arkoprabho Hazra",
+        name: "Abhishek Sudke and Arkoprabho Hazra",
       },
       { position: "Directors", name: "Sneha Banerjee" },
     ],
