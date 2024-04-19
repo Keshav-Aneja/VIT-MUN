@@ -62,7 +62,7 @@ const Header = () => {
                       BACKGROUND GUIDES
                     </button>
                   </a>
-                  <a href="">
+                  <a href="https://drive.google.com/drive/folders/1mTF_uF9JAx4Zigdq_zpb8kuNDyxfiTUB?usp=sharing">
                     <button className="px-6 py-2 bg-[rgba(203, 203, 203, 0.8)] text-xs text-nowrap hover:bg-[rgba(203,203,203,0.6)] transition-all duration-200 ease-linear rounded-md">
                       CONFERENCE POLICY
                     </button>
