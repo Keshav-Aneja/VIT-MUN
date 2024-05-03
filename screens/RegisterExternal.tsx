@@ -13,8 +13,6 @@ import { ExternalFormState } from "@/types/form";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 const RegisterExternal = () => {
   const router = useRouter();
 

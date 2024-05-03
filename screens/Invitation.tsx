@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Heading from "@/components/common/Heading";
 import InputBox from "@/components/InputBox";
-import Image from "next/image";
 import Help from "@/components/common/Help";
 import { toast } from "react-toastify";
 import { DelegatesType } from "@/types/form";
