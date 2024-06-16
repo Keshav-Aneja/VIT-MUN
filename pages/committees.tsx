@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import ReactLenis from "@studio-freight/react-lenis/types";
+import { ReactLenis } from "@studio-freight/react-lenis";
 import NavWrapper from "@/wrappers/NavWrapper";
 import BaseWrapper from "@/wrappers/BaseWrapper";
 import MainWrapper from "@/wrappers/MainWrapper";
